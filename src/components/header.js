@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#247BA0`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -27,6 +27,18 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <h2
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+          marginBottom: 0,
+          marginTop: 12,
+          fontWeight: 400,
+          fontSize: 20,
+        }}
+      >
+        Submission for the CoinList + The Graph hackathon, a dYdX subgraph
+      </h2>
     </div>
   </header>
 )

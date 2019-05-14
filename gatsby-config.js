@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `jackleslie/dydx`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -27,8 +27,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "dYdX",
+        // This is field under which it's accessible
+        fieldName: "dydx",
+        // Url to query from
+        url:
+          "https://api.thegraph.com/subgraphs/id/QmekxoMrkHDAhBF9NbgCXHj96zBeioxW3JzESztrR7yLuS",
+      },
+    },
   ],
 }

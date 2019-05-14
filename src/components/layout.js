@@ -35,10 +35,14 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <footer style={{ display: "flex", justifyContent: "center" }}>
+            <p>
+              Made with{" "}
+              <span role="img" aria-label="Love Heart">
+                ❤️
+              </span>{" "}
+              by <a href="https://jackleslie.dev">Jack Leslie</a>
+            </p>
           </footer>
         </div>
       </>
