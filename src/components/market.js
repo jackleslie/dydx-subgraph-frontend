@@ -1,7 +1,14 @@
 import PropTypes from "prop-types"
 import React from "react"
 
+import Image from "./image"
+
 const Market = ({ id, token }) => {
+  let symbol
+  if (id === 0) symbol = "eth"
+  else if (id === 1) symbol = "dai"
+  else symbol = "usdc"
+
   return (
     <div
       style={{

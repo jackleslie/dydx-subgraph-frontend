@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `jackleslie/dydx`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Frontend for the dydx subgraph, created by Jack Leslie as a submission for the CoinList + The Graph hackathon.`,
+    author: `@jackleslie`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
