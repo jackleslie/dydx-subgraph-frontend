@@ -36,7 +36,7 @@ module.exports = {
         fieldName: "dydx",
         // Url to query from
         url:
-          "https://api.thegraph.com/subgraphs/id/QmekxoMrkHDAhBF9NbgCXHj96zBeioxW3JzESztrR7yLuS",
+          "https://api.thegraph.com/subgraphs/name/jackleslie/dydx",
       },
     },
   ],
