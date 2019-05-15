@@ -14,11 +14,16 @@ const IndexPage = ({ data }) => {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
         }}
       >
         {data.dydx.markets.map(market => (
-          <Market key={market.id} id={market.id} token={market.tokenAddress} />
+          <Market
+            key={market.id}
+            id={market.id}
+            tokenAddress={market.tokenAddress}
+            tokenSymbol={market.tokenSymbol}
+          />
         ))}
       </div>
       <h3 style={{ marginBottom: 10 }}>Positions</h3>
@@ -34,6 +39,7 @@ export const query = graphql`
       markets {
         id
         tokenAddress
+        tokenSymbol
       }
     }
   }
