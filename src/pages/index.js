@@ -9,6 +9,25 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <h3 style={{ marginBottom: 10 }}>Positions</h3>
+      <div style={{ display: "flex" }}>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="4"
+          maxlength="8"
+          size="10"
+          placeholder="ETH address (0xab12...)"
+          style={{
+            flexGrow: 1,
+            padding: "20px",
+            fontFamily: "system-ui",
+            fontSize: "20px",
+          }}
+        />
+      </div>
       <h3 style={{ marginBottom: 10 }}>Markets</h3>
       <div
         style={{
@@ -23,10 +42,12 @@ const IndexPage = ({ data }) => {
             id={market.id}
             tokenAddress={market.tokenAddress}
             tokenSymbol={market.tokenSymbol}
+            lastIndexUpdate={market.lastIndexUpdate}
+            borrowIndex={market.borrowIndex}
+            supplyIndex={market.supplyIndex}
           />
         ))}
       </div>
-      <h3 style={{ marginBottom: 10 }}>Positions</h3>
     </Layout>
   )
 }
@@ -40,6 +61,9 @@ export const query = graphql`
         id
         tokenAddress
         tokenSymbol
+        lastIndexUpdate
+        borrowIndex
+        supplyIndex
       }
     }
   }

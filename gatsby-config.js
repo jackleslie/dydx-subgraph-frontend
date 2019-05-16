@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `jackleslie/dydx`,
+    title: `dYdX Subgraph`,
     description: `Frontend for the dydx subgraph, created by Jack Leslie as a submission for the CoinList + The Graph hackathon.`,
     author: `@jackleslie`,
   },
@@ -35,8 +35,7 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: "dydx",
         // Url to query from
-        url:
-          "https://api.thegraph.com/subgraphs/name/jackleslie/dydx",
+        url: "https://api.thegraph.com/subgraphs/name/jackleslie/dydx",
       },
     },
   ],

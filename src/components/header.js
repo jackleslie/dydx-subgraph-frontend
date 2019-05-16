@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
           fontSize: 20,
         }}
       >
-        Submission for the CoinList + The Graph hackathon, a dYdX subgraph
+        Submission for the CoinList + The Graph hackathon
       </h2>
     </div>
   </header>
