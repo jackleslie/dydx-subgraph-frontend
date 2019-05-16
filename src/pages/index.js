@@ -13,12 +13,11 @@ const IndexPage = ({ data }) => {
       <div style={{ display: "flex" }}>
         <input
           type="text"
-          id="name"
-          name="name"
+          id="address"
+          name="address"
           required
-          minlength="4"
-          maxlength="8"
-          size="10"
+          minlength="42"
+          maxlength="42"
           placeholder="ETH address (0xab12...)"
           style={{
             flexGrow: 1,
