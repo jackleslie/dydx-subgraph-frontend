@@ -30,12 +30,10 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        // This type will contain remote schema Query type
         typeName: "dYdX",
-        // This is field under which it's accessible
         fieldName: "dydx",
-        // Url to query from
         url: "https://api.thegraph.com/subgraphs/name/jackleslie/dydx",
+        refetchInterval: 60,
       },
     },
   ],
