@@ -18,18 +18,16 @@ export default function Long({ long }) {
       <p className={styles.infoText}>
         {`${(long.marginDeposit / 1000000000000000000).toFixed(2)} ETH`}
       </p>
-      <h3 className={styles.infoTitle}>Leverage</h3>
+      <h3 className={styles.infoTitle}>Open leverage</h3>
       <p className={styles.infoText}>
         {`${Number(long.leverage).toFixed(2)}x`}
       </p>
       <h3 className={styles.infoTitle}>Expires</h3>
       <p className={styles.infoText}>{getDate(long.expires)}</p>
       <h3 className={styles.infoTitle}>Open price</h3>
-      <p className={styles.infoText}>{`${Number(long.openPrice).toFixed(
-        4
-      )} ETH`}</p>
-      <h3 className={styles.infoTitle}>Market</h3>
-      <p className={styles.infoText}>{long.market}</p>
+      <p className={styles.infoText}>{`${Number(long.openPrice).toFixed(4)} ${
+        long.market
+      }`}</p>
     </div>
   );
 }
