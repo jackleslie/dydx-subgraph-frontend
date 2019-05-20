@@ -6,8 +6,6 @@ export default function Input({ ...props }) {
   return (
     <input
       type="text"
-      id="name"
-      name="name"
       id="address"
       name="address"
       required
