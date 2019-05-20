@@ -3,8 +3,10 @@ import ReactDOM from "react-dom";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import App from "./App";
+import Positions from "./Positions";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const client = new ApolloClient({
   uri: "https://api.thegraph.com/subgraphs/name/jackleslie/dydx"
@@ -12,7 +14,10 @@ const client = new ApolloClient({
 
 const AppWithProvider = () => (
   <ApolloProvider client={client}>
-    <App />
+    <Router>
+      <Route exact path="/" component={App} />
+      <Route exact path="/positions/:account" component={Positions} />
+    </Router>
   </ApolloProvider>
 );
 
