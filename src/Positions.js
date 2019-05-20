@@ -2,9 +2,7 @@ import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
-import { Layout, Header, Long } from "./components";
-
-import getDate from "./helpers/getDate";
+import { Layout, Header, Long, Short } from "./components";
 
 const Positions = ({ match }) => (
   <Query
@@ -22,6 +20,11 @@ const Positions = ({ match }) => (
         }
         shorts(where: { accountOwner: "${match.params.account}" }) {
           id
+          timestamp
+          leverage
+          expires
+          openPrice
+          market
         }
       }
     `}
@@ -48,7 +51,7 @@ const Positions = ({ match }) => (
             {loading ? (
               <p>Loading...</p>
             ) : (
-              data.shorts.map(short => <p key={short.id}>{short.id}</p>)
+              data.shorts.map(short => <Short key={short.id} short={short} />)
             )}
           </div>
         </Layout>
