@@ -2,7 +2,8 @@ import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
-import { Market, Layout, Header, Input, Button } from "./components";
+import { Market, Layout, Header } from "./components";
+import { Search } from "./containers";
 
 const App = () => (
   <Query
@@ -29,17 +30,7 @@ const App = () => (
             subtitle="Submission for the CoinList + The Graph hackathon"
           />
           <h2 style={{ fontWeight: 500 }}>Positions</h2>
-          <div
-            style={{
-              width: "80%",
-              display: "flex",
-              justifyContent: "center",
-              flexWrap: "wrap"
-            }}
-          >
-            <Input />
-            <Button>Search</Button>
-          </div>
+          <Search />
           <h2 style={{ fontWeight: 500 }}>Markets</h2>
           <div style={{ width: "80%", display: "flex", flexWrap: "wrap" }}>
             {loading ? (
