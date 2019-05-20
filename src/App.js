@@ -2,7 +2,7 @@ import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
-import { Market, Layout, Header } from "./components";
+import { Market, Layout, Header, Input } from "./components";
 
 const App = () => (
   <Query
@@ -20,7 +20,6 @@ const App = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
       if (error) return <p>Error :(</p>;
 
       return (
@@ -29,11 +28,17 @@ const App = () => (
             title="dYdX subgraph"
             subtitle="Submission for the CoinList + The Graph hackathon"
           />
+          <h2 style={{ fontWeight: 500 }}>Positions</h2>
+          <Input />
           <h2 style={{ fontWeight: 500 }}>Markets</h2>
           <div style={{ width: "80%", display: "flex", flexWrap: "wrap" }}>
-            {data.markets.map(market => (
-              <Market key={market.id} market={market} />
-            ))}
+            {loading ? (
+              <p>Loading...</p>
+            ) : (
+              data.markets.map(market => (
+                <Market key={market.id} market={market} />
+              ))
+            )}
           </div>
         </Layout>
       );
