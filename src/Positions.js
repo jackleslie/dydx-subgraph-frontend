@@ -2,7 +2,7 @@ import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
-import { Layout, Header } from "./components";
+import { Layout, Header, Long } from "./components";
 
 import getDate from "./helpers/getDate";
 
@@ -40,17 +40,7 @@ const Positions = ({ match }) => (
             {loading ? (
               <p>Loading...</p>
             ) : (
-              data.longs.map(long => (
-                <div key={long.id}>
-                  <p>{getDate(long.timestamp)}</p>
-                  <p>{(long.amount / 1000000000000000000).toFixed(2)}</p>
-                  <p>{(long.marginDeposit / 1000000000000000000).toFixed(2)}</p>
-                  <p>{Number(long.leverage).toFixed(2)}</p>
-                  <p>{getDate(long.expires)}</p>
-                  <p>{Number(long.openPrice).toFixed(4)}</p>
-                  <p>{long.market}</p>
-                </div>
-              ))
+              data.longs.map(long => <Long key={long.id} long={long} />)
             )}
           </div>
           <h2 style={{ fontWeight: 500 }}>Short positions</h2>
