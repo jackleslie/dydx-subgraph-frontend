@@ -5,6 +5,7 @@
   padding: 30px 10px 10px 10px;
   margin: 10px;
   text-align: center;
+  max-width: 500px;
 }
 
 .tokenSymbol {

@@ -32,7 +32,14 @@ const App = () => (
           <h2 style={{ fontWeight: 500 }}>Positions</h2>
           <Search />
           <h2 style={{ fontWeight: 500 }}>Markets</h2>
-          <div style={{ width: "80%", display: "flex", flexWrap: "wrap" }}>
+          <div
+            style={{
+              width: "80%",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center"
+            }}
+          >
             {loading ? (
               <p>Loading...</p>
             ) : (
