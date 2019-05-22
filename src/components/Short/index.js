@@ -10,16 +10,20 @@ export default function Short({ short }) {
     <div className={styles.short}>
       <h3 className={styles.infoTitle}>Timestamp</h3>
       <p className={styles.infoText}>{getDate(short.timestamp)}</p>
-      {/*
       <h3 className={styles.infoTitle}>Amount</h3>
       <p className={styles.infoText}>
-        {`${(short.amount / 1000000000000000000).toFixed(2)} ETH`}
+        {`${(short.amount / short.openPrice / 1000000000000000000).toFixed(
+          3
+        )} ETH`}
       </p>
       <h3 className={styles.infoTitle}>Margin deposit</h3>
       <p className={styles.infoText}>
-        {`${(short.marginDeposit / 1000000000000000000).toFixed(2)} ETH`}
+        {`${(
+          short.marginDeposit /
+          short.openPrice /
+          1000000000000000000
+        ).toFixed(3)} ETH`}
       </p>
-      */}
       <h3 className={styles.infoTitle}>Open leverage</h3>
       <p className={styles.infoText}>
         {`${Number(short.leverage).toFixed(2)}x`}

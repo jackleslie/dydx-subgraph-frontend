@@ -21,6 +21,8 @@ const Positions = ({ match }) => (
         shorts(where: { accountOwner: "${match.params.account}" }) {
           id
           timestamp
+          amount
+          marginDeposit
           leverage
           expires
           openPrice
