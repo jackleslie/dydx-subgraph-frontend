@@ -1,3 +1,4 @@
 import Search from "./Search";
+import Filter from "./Filter";
 
-export { Search };
+export { Search, Filter };

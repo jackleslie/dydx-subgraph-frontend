@@ -10,3 +10,9 @@
   margin: 5px;
   cursor: pointer;
 }
+
+.smallButton {
+  composes: button;
+  font-size: 14px;
+  padding: 14px;
+}

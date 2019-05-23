@@ -3,14 +3,19 @@ import PropTypes from "prop-types";
 
 import styles from "./index.module.css";
 
-export default function Button({ children, ...props }) {
+export default function Button({ children, small, ...props }) {
   return (
-    <button className={styles.button} {...props}>
+    <button className={small ? styles.smallButton : styles.button} {...props}>
       {children}
     </button>
   );
 }
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  small: PropTypes.bool
+};
+
+Button.defaultProps = {
+  small: false
 };

@@ -9,3 +9,9 @@
   margin: 5px;
   -webkit-appearance: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 100%;
+  }
+}
