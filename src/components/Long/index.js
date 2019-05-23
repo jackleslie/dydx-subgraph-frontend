@@ -29,7 +29,7 @@ export default function Long({ long }) {
         long.market
       }`}</p>
       <h3 className={styles.infoTitle}>Status</h3>
-      <p className={styles.infoText}>{long.closed ? "Closed" : "Open"}</p>
+      <p className={styles.infoText}>{long.status}</p>
     </div>
   );
 }

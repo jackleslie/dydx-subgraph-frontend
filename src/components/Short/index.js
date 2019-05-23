@@ -35,7 +35,7 @@ export default function Short({ short }) {
         short.market
       }`}</p>
       <h3 className={styles.infoTitle}>Status</h3>
-      <p className={styles.infoText}>{short.closed ? "Closed" : "Open"}</p>
+      <p className={styles.infoText}>{short.status}</p>
     </div>
   );
 }
