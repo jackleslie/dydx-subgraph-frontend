@@ -34,6 +34,8 @@ export default function Short({ short }) {
       <p className={styles.infoText}>{`${Number(short.openPrice).toFixed(4)} ${
         short.market
       }`}</p>
+      <h3 className={styles.infoTitle}>Status</h3>
+      <p className={styles.infoText}>{short.closed ? "Closed" : "Open"}</p>
     </div>
   );
 }

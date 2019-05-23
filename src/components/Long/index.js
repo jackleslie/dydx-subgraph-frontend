@@ -28,6 +28,8 @@ export default function Long({ long }) {
       <p className={styles.infoText}>{`${Number(long.openPrice).toFixed(4)} ${
         long.market
       }`}</p>
+      <h3 className={styles.infoTitle}>Status</h3>
+      <p className={styles.infoText}>{long.closed ? "Closed" : "Open"}</p>
     </div>
   );
 }

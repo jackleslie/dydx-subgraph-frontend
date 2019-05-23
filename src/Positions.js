@@ -17,6 +17,7 @@ const Positions = ({ match }) => (
           expires
           openPrice
           market
+          closed
         }
         shorts(where: { accountOwner: "${match.params.account}" }) {
           id
@@ -27,6 +28,7 @@ const Positions = ({ match }) => (
           expires
           openPrice
           market
+          closed
         }
       }
     `}
