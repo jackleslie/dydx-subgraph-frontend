@@ -12,9 +12,7 @@ export default function Short({ short }) {
       <p className={styles.infoText}>{getDate(short.timestamp)}</p>
       <h3 className={styles.infoTitle}>Amount</h3>
       <p className={styles.infoText}>
-        {`${(short.amount / short.openPrice / 1000000000000000000).toFixed(
-          3
-        )} ETH`}
+        {`${(short.amount / 1000000000000000000).toFixed(3)} ETH`}
       </p>
       <h3 className={styles.infoTitle}>Margin deposit</h3>
       <p className={styles.infoText}>
