@@ -2,10 +2,12 @@ import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
 
-import { Market, Layout, Header } from "./components";
-import { Search } from "./containers";
+import { Market, Layout, Header } from "../../components";
+import { Search } from "../../containers";
 
-const App = () => (
+import styles from "./index.module.css";
+
+const Home = () => (
   <Query
     query={gql`
       {
@@ -29,17 +31,10 @@ const App = () => (
             title="dYdX subgraph"
             subtitle="Submission for the CoinList + The Graph hackathon"
           />
-          <h2 style={{ fontWeight: 500 }}>Positions</h2>
+          <h2 className={styles.subtitle}>Positions</h2>
           <Search />
-          <h2 style={{ fontWeight: 500 }}>Markets</h2>
-          <div
-            style={{
-              width: "80%",
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center"
-            }}
-          >
+          <h2 className={styles.subtitle}>Markets</h2>
+          <div className={styles.markets}>
             {loading ? (
               <p>Loading...</p>
             ) : (
@@ -54,4 +49,4 @@ const App = () => (
   </Query>
 );
 
-export default App;
+export default Home;

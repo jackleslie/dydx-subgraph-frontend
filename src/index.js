@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import App from "./App";
-import Positions from "./Positions";
+import { Home, Positions } from "./pages";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -15,7 +14,7 @@ const client = new ApolloClient({
 const AppWithProvider = () => (
   <ApolloProvider client={client}>
     <Router>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/positions/:account" component={Positions} />
     </Router>
   </ApolloProvider>

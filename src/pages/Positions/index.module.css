@@ -1,0 +1,10 @@
+.positions {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subtitle {
+  font-weight: 500;
+}
